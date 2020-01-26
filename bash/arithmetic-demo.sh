@@ -7,6 +7,7 @@
 #    the sum of the 3 numbers with a label
 #    the product of the 3 numbers with a label
 
+#modifications begin:
 
 read -p "Please enter two numbers.
 
@@ -36,13 +37,16 @@ $firstnum times $secondnum is $multiplication.
 
 $firstnum divided by $secondnum is $division1 with a remainder of $mod1.
 OR
-$secondnum divided by $firstnum is $division2 with a remainded of $mod2.
+$secondnum divided by $firstnum is $division2 with a remainder of $mod2.
 
 -+-+-+-+-+EXPONENT+-+-+-+-+-
 
 $firstnum to the power of $secondnum is $(($firstnum ** $secondnum))
 "
-
+#back to original
+echo "
+-+-+-+-+-+ORIGINAL SCRIPT+-+-+-+-+-
+"
 sum=$((firstnum + secondnum))
 dividend=$((firstnum / secondnum))
 fpdividend=$(awk "BEGIN{printf \"%.2f\", $firstnum/$secondnum}")
