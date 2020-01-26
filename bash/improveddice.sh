@@ -21,6 +21,12 @@ echo "Rolling..."
 # roll the dice and save the results
 die1=$(( RANDOM % $sides + $bias))
 die2=$(( RANDOM % $sides + $bias ))
+
+#generate sum and Average
+sum=$(( $die1 + $die2 ))
+avg=$(( $sum / 2 ))
 # display the results
-echo "Rolled $die1, $die2 for a total of $(( $die1 + die2 ))
+echo "Rolled $die1, $die2.
+Total: $sum
+Average: $avg
 "
