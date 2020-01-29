@@ -17,8 +17,9 @@
 
 
 #MY VERSION
+hostname=$(hostname)
 read -p "What is your name?: " USER
 
 echo "
-Welcome $USER!
+Welcome to ${hostname}, $USER!
 It is `date +%T` on `date +%A`."
