@@ -18,7 +18,7 @@ correct="false"
 if [[ "$myPass" == "$referenceString" ]]
   then echo "Correct!"
   let correct="true"
-else read -p "Wrong! $attempt Attempts remaining.
+else read -p "Wrong! $attempt attempts remaining.
 Enter your password: " myPass
   let attempt=$attempt-1
 fi
@@ -27,8 +27,8 @@ if [[ "$correct" == "false" ]]
   then if [[ "$myPass" == "$referenceString" ]]
     then echo "Correct!"
     let correct="true"
-  else  read -p "Wrong! $attempt Attempts remaining.
-  Enter your password: " myPass
+  else  read -p "Wrong! $attempt attempts remaining.
+Enter your password: " myPass
     let attempt=$attempt-1
   fi
 fi
@@ -37,8 +37,8 @@ if [[ "$correct" == "false" ]]
   then if [[ "$myPass" == "$referenceString" ]]
     then echo "Correct!"
     let correct="true"
-  else  read -p "Wrong! $attempt Attempts remaining.
-  Enter your password: " myPass
+  else  read -p "Wrong! $attempt attempts remaining.
+Enter your password: " myPass
     let attempt=$attempt-1
   fi
 fi
@@ -47,8 +47,8 @@ if [[ "$correct" == "false" ]]
   then if [[ "$myPass" == "$referenceString" ]]
     then echo "Correct!"
     let correct="true"
-  else  read -p "Wrong! $attempt Attempts remaining.
-  Enter your password: " myPass
+  else  read -p "Wrong! $attempt attempts remaining.
+Enter your password: " myPass
     let attempt=$attempt-1
   fi
 fi
@@ -56,6 +56,6 @@ fi
 if [[ "$correct" == "false" ]]
   then if [[ "$myPass" == "$referenceString" ]]
     then echo "Correct!"
-  else echo "Wrong! $attempt Attempts remaining."
+  else echo "Wrong! $attempt attempts remaining."
   fi
 fi
