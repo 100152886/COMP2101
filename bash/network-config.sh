@@ -36,12 +36,18 @@
 
 
 hostName=$(hostname)
-LANaddress=$(ip a s $(ip a |awk '/: e/{gsub(/:/,"");print $2}')|awk '/inet /{gsub(/\/.*/,"");print $2}')
-LANHost=$(getent hosts 127.0.0.1 | awk '{print $2}')
+LANaddress=$(ip a s $(ip a |
+          awk '/: e/{gsub(/:/,"");print $2}')|
+          awk '/inet /{gsub(/\/.*/,"");print $2}')
+LANHost=$(getent hosts 127.0.0.1 |
+          awk '{print $2}')
 externalIP=$(curl -s icanhazip.com)
-externalName=$(getent hosts $(curl -s icanhazip.com) | awk '{print $2}')
-defaultIP=$(route -n | grep "^0.0.0.0" | awk '{print $2}')
-LANname=$(route | grep "default" | awk '{print $2}')
+externalName=$(getent hosts $(curl -s icanhazip.com) |
+          awk '{print $2}')
+defaultIP=$(route -n | grep "^0.0.0.0" |
+          awk '{print $2}')
+LANname=$(route | grep "default" |
+          awk '{print $2}')
 
 
 cat <<EOF
